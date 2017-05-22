@@ -24,7 +24,11 @@ Running with docker:
 
 ```
 docker pull rlister/s3cat
-docker run rlister/s3cat s3://bucket/key ...
+docker run \
+  -e AWS_REGION \
+  -e AWS_ACCESS_KEY_ID \
+  -e AWS_SECRET_ACCESS_KEY \
+  rlister/s3cat s3://bucket/key ...
 ```
 
 ## License
